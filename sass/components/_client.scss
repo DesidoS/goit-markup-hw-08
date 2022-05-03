@@ -1,0 +1,30 @@
+.client {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    
+    &__link {
+        display: flex;
+        border: 1px solid $social-network;
+        border-radius: 4px;
+        color: $social-network;
+        transition: color $cubic-bezier,
+        border $cubic-bezier;
+        &:hover,
+        &:focus {
+            border: 1px solid $link-hover-color;
+            color: $link-hover-color;
+        }
+    }
+    
+    
+    &__item:not(:last-child) {
+        margin-right: 30px;
+    }
+    
+    &__icon {
+        fill: currentColor;
+        width: 170px;
+        height: 92px;
+    }
+}

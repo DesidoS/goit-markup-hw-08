@@ -1,0 +1,29 @@
+body {
+    background-color: $white-text-color;
+    font-family: Roboto, sans-serif;
+    letter-spacing: 0.03em;
+    color: $general-text-color;
+    font-size: 14px;
+}
+
+.container {
+    margin: 0 auto;
+    width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.section {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+.title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.16;
+    text-align: center;
+    color: $tit-text-color;
+}

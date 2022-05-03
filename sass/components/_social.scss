@@ -1,0 +1,37 @@
+.social {
+    display: flex;
+    justify-content: center;
+    
+    &__icon {
+        width: 20px;
+        height: 20px;
+    }
+    
+    &__item:not(:last-child) {
+        margin-right: 10px;
+    }
+    
+    &__link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        fill: $social-network;
+        transition: fill $cubic-bezier,
+        background-color $cubic-bezier;
+        &:hover,
+        &:focus {
+            fill: $white-text-color;
+            background-color: $link-hover-color;
+        }
+    }
+    
+    
+    &__link--grey {
+        fill: $white-text-color;
+        background-color: $social-network-bcg;
+        
+    }
+}

@@ -1,0 +1,44 @@
+.team {
+    background-color: $bcg-filtr-color;
+}
+
+.employee {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    
+    &__name,
+    &__position {
+        font-size: 16px;
+        line-height: 1.18;
+        text-align: center;
+    }
+    
+    &__name {
+        margin-bottom: 10px;
+        font-weight: 500;
+        color: $tit-text-color;
+    }
+    
+    
+    &__item {
+        border-radius: 0px 0px 4px 4px;
+        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+        0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
+        &:not(:last-child) {
+            margin-right: 30px;
+        }
+    }
+    
+    &__caption {
+        background-color: $white-text-color;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        border-radius: 0px 0px 4px 4px;
+    }
+    
+    &__position {
+        margin-bottom: 16px;
+    }
+}
