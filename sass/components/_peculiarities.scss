@@ -21,6 +21,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        border-radius: 4px;
         width: 270px;
         height: 120px;
         background-color: $bcg-filtr-color;
@@ -28,5 +29,6 @@
     
     &__par {
         line-height: 1.71;
+
     }
 }
