@@ -1,10 +1,17 @@
 .client {
     display: flex;
-    justify-content: center;
-    margin-top: 50px;
+    flex-wrap: wrap;
+    // flex-direction: column;
+    margin-top: 30px;
+    // width: inherit;
+    // height: inherit;
+    // justify-content: center;
+    // margin-top: 50px;
     
     &__link {
         display: flex;
+        justify-content: center;
+        flex-direction: row;
         border: 1px solid $social-network;
         border-radius: 4px;
         color: $social-network;
@@ -16,15 +23,30 @@
             color: $link-hover-color;
         }
     }
-    
-    
-    &__item:not(:last-child) {
+    &__item:nth-child(odd) {
         margin-right: 30px;
     }
+    &__item {
+        flex-basis: calc((100% - 30px )/2);
+    }
+    &__item:not(:last-child) {
+        margin-bottom: 30px;
+    }
+    &__item:last-child {
+        margin-bottom: 60px;
+    }
+    // &__item:not(:last-child) {
+    //     margin-right: 30px;
+    // }
     
     &__icon {
         fill: currentColor;
-        width: 170px;
-        height: 92px;
+        width: 106px;
+        height: 60px;
     }
+    // &__icon {
+    //     fill: currentColor;
+    //     width: 170px;
+    //     height: 92px;
+    // }
 }

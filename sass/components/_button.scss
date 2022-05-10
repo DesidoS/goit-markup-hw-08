@@ -28,8 +28,11 @@
     }
 }
 
-&__button {
+&__subscribe {
     display: flex;
+    justify-content: center;
+    margin: 20px auto 0 auto;
+
     padding: 10px 28px;
         transition: background-color $cubic-bezier;
     &:hover,

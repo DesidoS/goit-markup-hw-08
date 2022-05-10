@@ -1,8 +1,12 @@
 .filtr {
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
+    // justify-content: center;
     margin-bottom: 50px;
     
+    &__item:first-child {
+        margin-bottom: 15px;
+    }
     &__item:not(:last-child) {
         margin-right: 8px;
     }

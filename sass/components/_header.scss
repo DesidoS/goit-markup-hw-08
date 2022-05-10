@@ -1,33 +1,131 @@
 .page-header {
     display: flex;
-    max-width: 1600px;
+    // align-items: baseline;
+    // max-width: 1600px;
     padding-top: 0px;
     padding-bottom: 0px;
     margin: 0 auto;
     border-bottom: $border-eee;
 }
 
+.menu {
+    display: none;
+    position: absolute;
+    z-index: 900;
+    top: 0;
+    left: 0;
+    padding-left: 40px;
+    padding-top: 32px;
+    padding-bottom: 48px;
+    width: 100%;
+    background-color: $white-text-color;
+    &.is-open {
+        display: block;
+    }
+    & .nav__link {
+        font-size: 40px;
+        display: block;
+        padding: 16px 0;
+    }
+        & .current {
+            color: $link-hover-color;
+        }
+    & .phone__link {
+        display: block;
+                        padding: 16px 0;
+        font-size: 34px;
+    }
+    & .mail__link {
+        display: block;
+        padding: 16px 0;
+        font-size: 34px;
+    }
+}
+   @media screen and (max-width: 767px) {
+    .contact {
+        display: flex;
+        flex-direction: column-reverse;
+        margin-top: 270px;
+        }
+
+    .menu-social {
+        display: flex;
+        margin-top: 64px;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 1.22;
+        color: $link-hover-color;
+
+        & li:not(:first-child){
+        padding-left: 10px;
+        }
+        & li:not(:last-child){
+        padding-right: 10px;
+                border-right: 1px solid rgba(33, 33, 33, 0.2);
+        }
+    }
+}
+.menu__button {
+    position: absolute;
+    z-index: 950;
+    display: inline-flex;
+    padding: 0;
+    margin: 0;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+
+    &:hover,
+    &:focus {
+        fill: $link-hover-color;
+    }
+        @media screen and (min-width: 768px) {
+        display: none; 
+        }
+    }
+.burger-close {
+    display: none;
+}
+
+.is-open .burger-close {
+    display: block;
+}
+.is-open .burger {
+    display: none;
+}
+
 .navigation {
     display: flex;
 }
 
-.header-logo {
-    padding-top: 24px;
-    padding-bottom: 25px;
-    margin-right: 93px;
+// .header-logo {
+//     padding-top: 24px;
+//     padding-bottom: 25px;
+    // margin-right: 93px;
+// }
+
+@media screen and (max-width: 768px) {
+    .header-logo {
+        display: block;
+        padding-top: 16px;
+        padding-bottom: 16px;
+        margin-right: auto;
+}
 }
 
 .nav {
-    display: flex;
+    // display: flex;
     
-    &__item:not(:first-child) {
-        margin-left: 50px;
-    }
+    // &__item:not(:first-child) {
+    //     margin-left: 50px;
+    // }
     
     &__link {
-        display: flex;
-        padding-top: 32px;
-        padding-bottom: 32px;
+        // display: flex;
+        // padding-top: 32px;
+        // padding-bottom: 32px;
         letter-spacing: 0.02em;
         font-weight: 500;
         line-height: 1.14;
@@ -41,35 +139,35 @@
 }
     
 
-.current {
-    position: relative;
-    color: $link-hover-color;
-    &::after {
-        content: "";
-        position: absolute;
-        bottom: -1px;
-        left: 0;
-        width: 100%;
-        height: 4px;
-        background-color: $link-hover-color;
-        border-radius: 2px;
-    }
-}
+// .current {
+//     position: relative;
+//     color: $link-hover-color;
+//     &::after {
+//         content: "";
+//         position: absolute;
+//         bottom: -1px;
+//         left: 0;
+//         width: 100%;
+//         height: 4px;
+//         background-color: $link-hover-color;
+//         border-radius: 2px;
+//     }
+// }
 
 
 .contact {
-    display: flex;
-    margin-left: auto;
-    &__item:last-child {
-        margin-left: 30px;
-    }
+    // display: flex;
+    // margin-left: auto;
+    // &__item:last-child {
+    //     margin-left: 30px;
+    // }
     
     
     &__link {
-        display: flex;
-        align-items: center;
-        padding-top: 32px;
-        padding-bottom: 32px;
+        // display: flex;
+        // align-items: center;
+        // padding-top: 32px;
+        // padding-bottom: 32px;
         letter-spacing: 0.02em;
         font-weight: 500;
         line-height: 1.14;
@@ -81,7 +179,11 @@
         }
     }
     &__icon {
+        display: none;
         fill: currentColor;
         margin-right: 10px;
+        @media screen and (min-width: 768px) {
+            display: block;
+        }
     }
 }

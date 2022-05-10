@@ -24,40 +24,71 @@
   <body>
     <header>
       <div class="container page-header">
-        <nav class="navigation">
-          <a href="./index.html" class="header-logo logo"
-            >Web<span class="header-logo__studio">Studio </span>
-          </a>
-          <ul class="nav">
-            <li class="nav__item">
-              <a href="./index.html" class="nav__link">Студия</a>
+        <a href="./index.html" class="header-logo logo"
+          >Web<span class="header-logo__studio">Studio </span>
+        </a>
+        <button
+          type="button"
+          class="menu__button"
+          aria-expanded="false"
+          data-menu-button
+        >
+          <svg
+            width="40"
+            height="40"
+            aria-label="Переключатель мобильного меню"
+          >
+            <use class="burger" href="./images/icons.svg#icon-burger"></use>
+            <use
+              class="burger-close"
+              href="./images/icons.svg#icon-burger-close"
+            ></use>
+          </svg>
+        </button>
+        <div class="menu" data-menu>
+          <nav class="navigation">
+            <ul class="nav">
+              <li class="nav__item">
+                <a href="./index.html" class="nav__link">Студия</a>
+              </li>
+              <li class="nav__item">
+                <a href="./portfolio.html" class="nav__link current"
+                  >Портфолио</a
+                >
+              </li>
+              <li class="nav__item">
+                <a href="#" class="nav__link">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+          <ul class="contact">
+            <li class="contact__item">
+              <a
+                class="contact__link mail__link"
+                href="mailto:info@devstudio.com"
+              >
+                <svg class="contact__icon" width="16" height="12">
+                  <use href="./images/icons.svg#icon-envelope"></use>
+                </svg>
+                info@devstudio.com</a
+              >
             </li>
-            <li class="nav__item">
-              <a href="./portfolio.html" class="nav__link current">Портфолио</a>
-            </li>
-            <li class="nav__item">
-              <a href="#" class="nav__link">Контакты</a>
+            <li class="contact__item">
+              <a class="contact__link phone__link" href="tel:+380961111111">
+                <svg class="contact__icon" width="10" height="16">
+                  <use href="./images/icons.svg#icon-sphone"></use>
+                </svg>
+                +38 096 111 11 11</a
+              >
             </li>
           </ul>
-        </nav>
-        <ul class="contact">
-          <li class="contact__item">
-            <a class="contact__link" href="mailto:info@devstudio.com">
-              <svg class="contact__icon" width="16" height="12">
-                <use href="./images/icons.svg#icon-envelope"></use>
-              </svg>
-              info@devstudio.com</a
-            >
-          </li>
-          <li class="contact__item">
-            <a class="contact__link" href="tel:+380961111111">
-              <svg class="contact__icon" width="10" height="16">
-                <use href="./images/icons.svg#icon-sphone"></use>
-              </svg>
-              +38 096 111 11 11</a
-            >
-          </li>
-        </ul>
+          <ul class="menu-social">
+            <li>Instagram</li>
+            <li>Twitter</li>
+            <li>Facebook</li>
+            <li>LinkedIn</li>
+          </ul>
+        </div>
       </div>
     </header>
     <main>
@@ -87,9 +118,16 @@
               <a class="project__link" href="#">
                 <div class="project__thumb">
                   <img
+                    srcset="
+                      ./images/project-1.jpg             480w,
+                      ./images/project-1-mobile-x2.jpg   960w,
+                      ./images/project-1-tablet.jpg      768w,
+                      ./images/project-1-tablet-x2.jpg  1536w,
+                      ./images/project-1-desktop.jpg    1600w,
+                      ./images/project-1-desktop-x2.jpg 3200w
+                    "
                     src="./images/project-1.jpg"
                     alt="Веб-сайт"
-                    width="370"
                   />
                   <div class="project__back">
                     <p>
@@ -109,7 +147,18 @@
             <li class="project__item">
               <a class="project__link" href="#">
                 <div class="project__thumb">
-                  <img src="./images/project-2.jpg" alt="Дизайн" width="370" />
+                  <img
+                    srcset="
+                      ./images/project-2.jpg             480w,
+                      ./images/project-2-mobile-x2.jpg   960w,
+                      ./images/project-2-tablet.jpg      768w,
+                      ./images/project-2-tablet-x2.jpg  1536w,
+                      ./images/project-2-desktop.jpg    1600w,
+                      ./images/project-2-desktop-x2.jpg 3200w
+                    "
+                    src="./images/project-2.jpg"
+                    alt="Дизайн"
+                  />
                   <div class="project__back">
                     <p>
                       Ресурс предлагает комплексные предложения с разным уровнем
@@ -131,9 +180,16 @@
               <a class="project__link" href="#">
                 <div class="project__thumb">
                   <img
+                    srcset="
+                      ./images/project-3.jpg             480w,
+                      ./images/project-3-mobile-x2.jpg   960w,
+                      ./images/project-3-tablet.jpg      768w,
+                      ./images/project-3-tablet-x2.jpg  1536w,
+                      ./images/project-3-desktop.jpg    1600w,
+                      ./images/project-3-desktop-x2.jpg 3200w
+                    "
                     src="./images/project-3.jpg"
                     alt="Приложение"
-                    width="370"
                   />
                   <div class="project__back">
                     <p>
@@ -154,9 +210,16 @@
               <a class="project__link" href="#">
                 <div class="project__thumb">
                   <img
+                    srcset="
+                      ./images/project-4.jpg             480w,
+                      ./images/project-4-mobile-x2.jpg   960w,
+                      ./images/project-4-tablet.jpg      768w,
+                      ./images/project-4-tablet-x2.jpg  1536w,
+                      ./images/project-4-desktop.jpg    1600w,
+                      ./images/project-4-desktop-x2.jpg 3200w
+                    "
                     src="./images/project-4.jpg"
                     alt="Маркетинг"
-                    width="370"
                   />
                   <div class="project__back">
                     <p>
@@ -177,9 +240,16 @@
               <a class="project__link" href="#">
                 <div class="project__thumb">
                   <img
+                    srcset="
+                      ./images/project-5.jpg             480w,
+                      ./images/project-5-mobile-x2.jpg   960w,
+                      ./images/project-5-tablet.jpg      768w,
+                      ./images/project-5-tablet-x2.jpg  1536w,
+                      ./images/project-5-desktop.jpg    1600w,
+                      ./images/project-5-desktop-x2.jpg 3200w
+                    "
                     src="./images/project-5.jpg"
                     alt="Приложение"
-                    width="370"
                   />
                   <div class="project__back">
                     <p>
@@ -200,9 +270,16 @@
               <a class="project__link" href="#">
                 <div class="project__thumb">
                   <img
+                    srcset="
+                      ./images/project-6.jpg             480w,
+                      ./images/project-6-mobile-x2.jpg   960w,
+                      ./images/project-6-tablet.jpg      768w,
+                      ./images/project-6-tablet-x2.jpg  1536w,
+                      ./images/project-6-desktop.jpg    1600w,
+                      ./images/project-6-desktop-x2.jpg 3200w
+                    "
                     src="./images/project-6.jpg"
                     alt="Веб-сайт"
-                    width="370"
                   />
                   <div class="project__back">
                     <p>
@@ -222,7 +299,18 @@
             <li class="project__item">
               <a class="project__link" href="#">
                 <div class="project__thumb">
-                  <img src="./images/project-7.jpg" alt="Дизайн" width="370" />
+                  <img
+                    srcset="
+                      ./images/project-7.jpg             480w,
+                      ./images/project-7-mobile-x2.jpg   960w,
+                      ./images/project-7-tablet.jpg      768w,
+                      ./images/project-7-tablet-x2.jpg  1536w,
+                      ./images/project-7-desktop.jpg    1600w,
+                      ./images/project-7-desktop-x2.jpg 3200w
+                    "
+                    src="./images/project-7.jpg"
+                    alt="Дизайн"
+                  />
                   <div class="project__back">
                     <p>
                       Ресурс предлагает комплексные предложения с разным уровнем
@@ -242,9 +330,16 @@
               <a class="project__link" href="#">
                 <div class="project__thumb">
                   <img
+                    srcset="
+                      ./images/project-8.jpg             480w,
+                      ./images/project-8-mobile-x2.jpg   960w,
+                      ./images/project-8-tablet.jpg      768w,
+                      ./images/project-8-tablet-x2.jpg  1536w,
+                      ./images/project-8-desktop.jpg    1600w,
+                      ./images/project-8-desktop-x2.jpg 3200w
+                    "
                     src="./images/project-8.jpg"
                     alt="Маркетинг"
-                    width="370"
                   />
                   <div class="project__back">
                     <p>
@@ -265,9 +360,16 @@
               <a class="project__link" href="#">
                 <div class="project__thumb">
                   <img
+                    srcset="
+                      ./images/project-9.jpg             480w,
+                      ./images/project-9-mobile-x2.jpg   960w,
+                      ./images/project-9-tablet.jpg      768w,
+                      ./images/project-9-tablet-x2.jpg  1536w,
+                      ./images/project-9-desktop.jpg    1600w,
+                      ./images/project-9-desktop-x2.jpg 3200w
+                    "
                     src="./images/project-9.jpg"
                     alt="Приложение"
-                    width="370"
                   />
                   <div class="project__back">
                     <p>
@@ -290,8 +392,8 @@
     </main>
     <footer class="section footer">
       <div class="container basement">
-        <div>
-          <a href="./index.html" class="logo"
+        <div class="info-box">
+          <a href="./index.html" class="logo footer-logo"
             >Web<span class="logo__studio">Studio</span>
           </a>
           <address>
@@ -318,7 +420,7 @@
         </div>
         <div class="connect">
           <strong class="basement__title">присоединяйтесь</strong>
-          <ul class="social">
+          <ul class="social social-team">
             <li class="social__item">
               <a class="social__link social__link--grey" href="#">
                 <svg class="social__icon instagram">
@@ -359,7 +461,7 @@
                 class="subscribe__input"
               />
             </label>
-            <button type="submit" class="button subscribe__button">
+            <button type="submit" class="button button__subscribe">
               Подписаться
               <svg class="subscribe__send">
                 <use href="./images/icons.svg#icon-send"></use>
@@ -369,6 +471,6 @@
         </div>
       </div>
     </footer>
-    <script src="./js/modal.js"></script>
+    <script src="./mobile-menu.js"></script>
   </body>
 </html>

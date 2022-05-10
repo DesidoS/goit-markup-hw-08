@@ -8,16 +8,17 @@ body {
 
 .container {
     margin: 0 auto;
-    width: 1200px;
+    // min-width: 100%;
     padding-left: 15px;
     padding-right: 15px;
 }
 
 .section {
-    max-width: 1600px;
+    padding-top: 60px;
+    // max-width: 1600px;
+    // padding-top: 94px;
+    // padding-bottom: 94px;
     margin: 0 auto;
-    padding-top: 94px;
-    padding-bottom: 94px;
 }
 
 .title {

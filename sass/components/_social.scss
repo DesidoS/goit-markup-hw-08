@@ -1,6 +1,6 @@
 .social {
     display: flex;
-    justify-content: center;
+    // justify-content: center;
     
     &__icon {
         width: 20px;
@@ -34,4 +34,8 @@
         background-color: $social-network-bcg;
         
     }
+}
+.social-team {
+    display: flex;
+    justify-content: center;
 }

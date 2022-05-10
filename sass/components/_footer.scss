@@ -1,24 +1,42 @@
 .footer {
-    background-color: $bg-color-second;
     padding-top: 60px;
     padding-bottom: 60px;
-}
+    background-color: $bg-color-second;
 
+// @media screen and (max-width: 768px) {
+//     width: 100%;
+// }
+}
 .basement {
-    display: flex;
-    align-items: baseline;
+    // display: flex;
+    // align-items: baseline;
     
     &__title {
         display: block;
+        margin-top: 60px;
         margin-bottom: 20px;
+        text-align: center;
         font-weight: 700;
         line-height: 16px;
         text-transform: uppercase;
         color: $white-text-color;
     }
 }
+.info-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+// .footer-logo {
+// margin: 0 auto;
+// }
 
 .info {
+        display: flex;
+            flex-direction: column;
+            align-items: center;
     margin-top: 20px;
     line-height: 1.71;
     
@@ -29,7 +47,8 @@
     &__item:not(:first-child) {
         margin-top: 9px;
     }
-    
+    margin-left: auto;
+    margin-right: auto;
     &__contact {
         color: $contact-text-color;
         transition: color $cubic-bezier;
@@ -45,15 +64,17 @@
 }
 
 .subscribe {
-    margin-left: auto;
+    // display: block;
     /* margin-left: 93px; */
+    margin-left: auto;
     &__form {
-        display: flex;
+        display: block;
     }
     &__input {
+        // margin-right: 12px;
+        // width: 358px;
         padding: 0 16px;
-        margin-right: 12px;
-        width: 358px;
+        width: 100%;
         height: 50px;
         border-radius: 4px;
         border: 1px solid $input-bcg;
