@@ -3,10 +3,9 @@
     padding-bottom: 60px;
     background-color: $bg-color-second;
 
-// @media screen and (max-width: 768px) {
-//     width: 100%;
-// }
 }
+
+
 .basement {
     // display: flex;
     // align-items: baseline;
@@ -95,5 +94,20 @@
         width: 24px;
         height: 24px;
         fill: $white-text-color;
+    }
+}
+@media screen and (min-width: 768px) {
+    .footer-tablet {
+        display: flex;
+        margin: 0 auto;
+    }
+.connect {
+    margin-right: 74px;
+}
+.info-box {
+    margin-left: 61px;
+}
+    .connect-tablet {
+        margin-top: 0;
     }
 }

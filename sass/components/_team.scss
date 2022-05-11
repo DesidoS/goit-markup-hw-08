@@ -7,6 +7,11 @@
     // flex-wrap: wrap;
     margin-top: 30px;
     // margin-top: 50px;
+                @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 30px;
+}
     
     &__name,
     &__position {
@@ -33,8 +38,15 @@
         // &:not(:last-child) {
         //     margin-right: 30px;
         // }
+    @media screen and (min-width: 768px) {
+            flex-basis: calc((100% - 30px)/2);
+            text-align: left;
+            margin-bottom: 30px;
+        }
+        &:nth-child(odd) {
+            margin-right: 30px;
+        }
     }
-    
     &__caption {
         background-color: $white-text-color;
         padding-top: 30px;
@@ -45,5 +57,4 @@
     &__position {
         margin-bottom: 16px;
     }
-
-}
+    }

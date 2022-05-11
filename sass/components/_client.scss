@@ -7,7 +7,9 @@
     // height: inherit;
     // justify-content: center;
     // margin-top: 50px;
-    
+    @media screen and (min-width: 768px) {
+        padding-bottom: 30px;
+    }
     &__link {
         display: flex;
         justify-content: center;
@@ -26,8 +28,13 @@
     &__item:nth-child(odd) {
         margin-right: 30px;
     }
+
+
     &__item {
         flex-basis: calc((100% - 30px )/2);
+            @media screen and (min-width: 768px) {
+                    flex-basis: calc((100% - 60px)/3);
+        }
     }
     &__item:not(:last-child) {
         margin-bottom: 30px;
@@ -49,4 +56,15 @@
     //     width: 170px;
     //     height: 92px;
     // }
+.client__item {
+    @media screen and (min-width: 768px) {
+        margin-right: 30px;
+    }
+}
+.client__item:nth-child(3n + 3) {
+    @media screen and (min-width: 768px) {
+        margin-right: 0;
+    }
+    margin-bottom: 30px;
+}
 }

@@ -35,7 +35,7 @@
     border-radius: 4px;
     background-color: $white-text-color;
 
-    
+
     &__close {
         position: absolute;
         padding: 0;
@@ -47,12 +47,13 @@
         background-color: $white-text-color;
         border: 1px solid rgba(0, 0, 0, 0.1);
         border-radius: 50%;
+
         &:hover .modal__icon,
         &:focus .modal__icon {
             fill: $link-hover-color;
         }
     }
-    
+
     &__icon {
         width: 11px;
         height: 11px;
@@ -60,7 +61,7 @@
         transition: fill $cubic-bezier;
     }
 }
-    
+
 .form__header {
     display: block;
     padding-left: 4px;
@@ -86,19 +87,22 @@
     margin-top: 4px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
+
     &:focus {
         border: 1px solid $link-hover-color;
         outline: $link-hover-color;
         cursor: pointer;
     }
+
     &:focus+.form__icon {
         fill: $link-hover-color;
     }
 }
+
 .form__label {
     display: block;
     margin-top: 10px;
-    
+
     font-size: 12px;
     line-height: 1.16;
     letter-spacing: 0.01em;
@@ -112,12 +116,14 @@
     width: 18px;
     height: 18px;
 }
+
 .form__input--comment {
     display: block;
     padding-left: 16px;
     padding-right: 16px;
     resize: none;
     height: 120px;
+
     &::placeholder {
         font-size: 12px;
         line-height: 1.16;
@@ -132,7 +138,7 @@
     display: flex;
     margin-top: 20px;
     margin-bottom: 30px;
-    
+
     &__label {
         margin-left: 24px;
 
@@ -140,12 +146,12 @@
         font-weight: 400;
         font-size: 12px;
     }
-    
+
     &__link {
         color: $link-hover-color;
         text-decoration: underline;
     }
-    
+
     &__input {
         position: absolute;
         width: 1px;
@@ -155,12 +161,13 @@
         overflow: hidden;
         border: 0;
         clip: rect(0 0 0 0);
+
         &:checked~.check__icon {
             border-color: transparent;
             background-image: url(../images/check1.svg);
         }
     }
-    
+
     &__icon {
         position: absolute;
         display: block;
@@ -171,8 +178,8 @@
         background-position: center;
         background-origin: border-box;
         background-image: url(../images/border.svg);
-        
-        transform: translate(-150%,-100%);
+
+        transform: translate(-150%, -100%);
         transition: background-image $cubic-bezier;
     }
 }
