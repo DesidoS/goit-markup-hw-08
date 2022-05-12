@@ -1,7 +1,9 @@
 .filtr {
     display: flex;
     flex-wrap: wrap;
-    // justify-content: center;
+    @media screen and (min-width: 768px) {
+    justify-content: center}
+    
     margin-bottom: 50px;
     
     &__item:first-child {
