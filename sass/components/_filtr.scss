@@ -12,6 +12,11 @@
     &__item:not(:last-child) {
         margin-right: 8px;
     }
+        @media screen and (min-width: 1200px) {
+    &__item:first-child {
+        margin-bottom: 0;
+                    }
+        }
     
     &__button {
         padding: 6px 22px;

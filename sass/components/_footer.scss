@@ -7,9 +7,10 @@
 
 
 .basement {
-    // display: flex;
-    // align-items: baseline;
-    
+    @media screen and (min-width: 1200px) {
+    display: flex;
+    align-items: baseline;
+    }
     &__title {
         display: block;
         margin-top: 60px;
@@ -19,6 +20,11 @@
         line-height: 16px;
         text-transform: uppercase;
         color: $white-text-color;
+        @media screen and (min-width: 1200px) {
+            text-align:left;
+            margin-top: 0;
+
+    }
     }
 }
 .info-box {
@@ -26,6 +32,9 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+        @media screen and (min-width: 1200px) {
+            align-items: flex-start;
+        }
 }
 
 // .footer-logo {
@@ -33,11 +42,14 @@
 // }
 
 .info {
-        display: flex;
-            flex-direction: column;
-            align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin-top: 20px;
     line-height: 1.71;
+    @media screen and (min-width: 1200px) {
+    align-items:flex-start;
+    }
     
     &__link {
         color: $white-text-color;
@@ -59,23 +71,55 @@
 }
 .connect {
     margin-left: auto;
-    /* margin-left: 70px; */
+}
+@media screen and (min-width: 768px) {
+    .footer-tablet {
+        display: flex;
+        align-items:flex-start
+    }
+    
+    .connect {
+        margin-right: 74px;
+    }
+    
+    @media screen and (min-width: 1200px) {
+        .connect {
+            margin-right: 0;
+            margin-left: 70px;
+        }
+        .footer-tablet {
+            align-items: baseline;
+        }
+    }
+
+    .info-box {
+        margin-left: 61px;
+
+        @media screen and (min-width: 1200px) {
+            margin-left: 0;
+        }
+    }
+
+    .connect-tablet {
+        margin-top: 0;
+    }
 }
 
 .subscribe {
     display: flex;
     flex-direction: column;
-    /* margin-left: 93px; */
     margin-left: auto;
     &__form {
         display: flex;
         flex-direction: column;
         align-items: center;
+        @media screen and (min-width: 1200px) {
+            flex-direction:row;
+            
+        }
 
     }
     &__input {
-        // margin-right: 12px;
-        // width: 358px;
         margin: 0 auto;
         width: 450px;
         padding: 0 16px;
@@ -93,26 +137,18 @@
             outline: $link-hover-color;
             cursor: pointer;
         }
+        @media screen and (max-width: 480px) {
+            width: 100%;
+        }
+        @media screen and (min-width: 1200px) {
+            width: 358px;
+            margin-right: 12px;
+        }
     }
     &__send {
         margin-left: 10px;
         width: 24px;
         height: 24px;
         fill: $white-text-color;
-    }
-}
-@media screen and (min-width: 768px) {
-    .footer-tablet {
-        display: flex;
-        // margin: 0 auto;
-    }
-.connect {
-    margin-right: 74px;
-}
-.info-box {
-    margin-left: 61px;
-}
-    .connect-tablet {
-        margin-top: 0;
     }
 }

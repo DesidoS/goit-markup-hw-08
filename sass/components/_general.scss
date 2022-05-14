@@ -8,17 +8,22 @@ body {
 
 .container {
     margin: 0 auto;
-    // min-width: 100%;
     padding-left: 15px;
     padding-right: 15px;
+    @media screen and (min-width: 1200px) {
+        max-width: 1200px;
+    }
 }
 
 .section {
     padding-top: 60px;
-    // max-width: 1600px;
-    // padding-top: 94px;
-    // padding-bottom: 94px;
+    padding-bottom: 60px;
     margin: 0 auto;
+    @media screen and (min-width: 1200px) {
+        padding-bottom: 94px;
+        padding-top: 94px;
+        max-width: 1600px;
+    }
 }
 
 .title {

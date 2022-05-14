@@ -1,6 +1,12 @@
+.doing-hidden {
+    @media screen and (max-width: 1200px) {
+            display: none;
+        }
+}
 .doing {
-    display: none;
+    display: flex;
     margin-top: 50px;
+
     
     &__item {
         width: 100%;

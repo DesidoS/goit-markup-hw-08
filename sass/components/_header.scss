@@ -1,12 +1,13 @@
 .page-header {
     display: flex;
-    align-items: baseline;
     width: 100%;
-    // max-width: 1600px;
     padding-top: 0px;
     padding-bottom: 0px;
     margin: 0 auto;
     border-bottom: $border-eee;
+@media screen and (min-width: 1200px) {
+    max-width: 1200px;
+    }
 }
 
 .menu {
@@ -47,13 +48,12 @@
         font-size: 24px;
     }
 
-    @media screen and (min-width:768px) {
+@media screen and (min-width:768px) {
         padding: 0;
         display: flex;
         position: static;
         margin-left: 88px;
 
-        // align-items: baseline;
         & .nav__link {
             font-size: 14px;
             padding: 32px 0;
@@ -70,22 +70,47 @@
             padding-bottom: 21px;
             margin-top: 10px;
             font-size: 12px;
+@media screen and (min-width: 1200px) {
+            font-size: 14px;                   
+        }
         }
 
         & .mail__link {
             padding: 0;
             padding-top: 21px;
             font-size: 12px;
+@media screen and (min-width: 1200px) {
+            font-size: 14px;                    
+        }
         }
 
+
+@media screen and (min-width: 1200px) {
+                margin-left: 93px; 
+    .contact {
+        flex-direction: row;
+        margin-left: auto;
+                &__link {
+                display: flex;
+                align-items: center;
+                padding-top: 32px;
+                padding-bottom: 32px;
+                margin-top: 0;
+        }
+    &__item:last-child {
+        margin-left: 30px;
     }
 }
 
+}
+    }
+}
 @media screen and (max-width: 767px) {
     .contact {
         display: flex;
         flex-direction: column-reverse;
         margin-top: 270px;
+        font-size: 14px;
     }
 
     .menu-social {
@@ -107,8 +132,6 @@
     }
 
 }
-
-
 @media screen and (min-width:768px) {
     .menu-social {
         display: none;
@@ -120,7 +143,6 @@
 
 @media screen and (max-width: 767px) {
     .header-logo {
-        display: block;
         padding-top: 16px;
         padding-bottom: 16px;
         margin-right: auto;
@@ -130,8 +152,15 @@
 @media screen and (min-width:768px) {
 
     .header-logo {
-        padding-top: 20px;
+        padding-top: 26px;
         padding-bottom: 26px;
+    }
+}
+@media screen and (min-width:1200px) {
+
+    .header-logo {
+        padding-top: 24px;
+        padding-bottom: 24px;
     }
 }
 
@@ -153,7 +182,7 @@
         fill: $link-hover-color;
     }
 
-    @media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
         display: none;
     }
 }
@@ -173,27 +202,8 @@
 .navigation {
     display: flex;
 }
-
-// для десктопа
-// .header-logo {
-//     padding-top: 24px;
-//     padding-bottom: 25px;
-// margin-right: 93px;
-// }
-
-
-
 .nav {
-    // display: flex;
-
-    // &__item:not(:first-child) {
-    //     margin-left: 50px;
-    // }
-
     &__link {
-        // display: flex;
-        // padding-top: 32px;
-        // padding-bottom: 32px;
         letter-spacing: 0.02em;
         font-weight: 500;
         line-height: 1.14;
@@ -204,15 +214,14 @@
         &:focus {
             color: $link-hover-color;
         }
-
-        @media screen and (min-width:768px) {
+@media screen and (min-width:768px) {
             display: flex;
             padding-top: 32px;
             padding-bottom: 32px;
         }
     }
 
-    @media screen and (min-width:768px) {
+@media screen and (min-width:768px) {
         display: flex;
         font-size: 14px;
 
@@ -243,18 +252,7 @@
 
 
 .contact {
-    // display: flex;
-    // flex-direction: row;
-    // margin-left: auto;
-    // &__item:last-child {
-    //     margin-left: 30px;
-    // }
-
     &__link {
-        // display: flex;
-        // align-items: center;
-        // padding-top: 32px;
-        // padding-bottom: 32px;
         letter-spacing: 0.02em;
         font-weight: 500;
         line-height: 1.14;
@@ -267,15 +265,16 @@
         }
 
     }
-
     &__icon {
         display: none;
         fill: currentColor;
 
-        @media screen and (min-width: 768px) {
-            // margin-right: 10px;
+@media screen and (min-width: 768px) {
             margin-right: 8px;
             display: flex;
+        }
+@media screen and (min-width: 768px) {
+            margin-right: 10px;
         }
     }
 }
