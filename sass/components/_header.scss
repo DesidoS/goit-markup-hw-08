@@ -1,13 +1,11 @@
 .page-header {
+    position: relative;
     display: flex;
     width: 100%;
     padding-top: 0px;
     padding-bottom: 0px;
     margin: 0 auto;
     border-bottom: $border-eee;
-@media screen and (min-width: 1200px) {
-    max-width: 1200px;
-    }
 }
 
 .menu {
@@ -172,7 +170,11 @@
     padding: 0;
     margin: 0;
     top: 10px;
-    right: 15px;
+    left: 425px;
+    @media screen and (max-width: 479px) {
+        left: 350px;
+            // right: 10px;
+        }
     cursor: pointer;
     border: none;
     background-color: transparent;
