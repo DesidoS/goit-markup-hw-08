@@ -511,6 +511,7 @@ body {
 .hero__title {
   margin: 0 60px;
   margin-bottom: 30px;
+  width: 360px;
   font-weight: 900;
   font-size: 26px;
   line-height: 1.62;
@@ -519,15 +520,22 @@ body {
   color: #FFFFFF;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 479px) {
+  .hero__title {
+    width: 250px;
+    margin: 0 auto 30px auto;
+  }
+}
+
+@media (min-width: 480px) {
   .hero__title {
     margin: 0 auto 30px auto;
-    width: 360px;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .hero__title {
+    margin: 0 auto 30px auto;
     width: 696px;
     font-size: 44px;
     line-height: 1.36;
