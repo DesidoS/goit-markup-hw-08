@@ -1104,9 +1104,6 @@ body {
     -ms-flex-preferred-size: content;
         flex-basis: content;
   }
-}
-
-@media screen and (min-width: 1200px) and (min-width: 1200px) {
   .client__item:not(:last-child) {
     margin-right: 30px;
     margin-bottom: 0px;
@@ -1115,15 +1112,8 @@ body {
 
 .client__icon {
   fill: currentColor;
-  width: 106px;
+  width: 100%;
   height: 90px;
-}
-
-@media screen and (min-width: 1200px) {
-  .client__icon {
-    width: 168px;
-    height: 90px;
-  }
 }
 
 .filtr {
