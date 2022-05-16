@@ -141,7 +141,9 @@
 
     &__label {
         margin-left: 24px;
-
+        @media (min-width:1200px) {
+            margin-left: 37px;
+        }
         line-height: 1.16;
         font-weight: 400;
         font-size: 12px;
