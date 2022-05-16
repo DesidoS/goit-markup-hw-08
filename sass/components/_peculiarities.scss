@@ -1,7 +1,11 @@
 .peculiarities-title {
     display: none;
 }
-
+        .peculiarities-reset {
+            @media screen and (min-width: 1200px) {
+                padding-bottom: 0;
+            }
+        }
 .peculiarities {
     display: flex;
     flex-wrap: wrap;
@@ -36,12 +40,16 @@
         margin-bottom: 0;
         }
     }
+
 @media screen and (min-width: 1200px) {
-        flex-wrap: nowrap;
+
+    flex-wrap: nowrap;
+
         flex-basis: calc((100% - 90px)/4);
     }
 }
 @media screen and (min-width: 1200px) {
+
         .peculiarities__item {
             margin-bottom: 0;
     }

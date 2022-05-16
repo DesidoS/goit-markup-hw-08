@@ -96,7 +96,7 @@
           Заказать услугу
         </button>
       </section>
-      <section class="section peculiarities">
+      <section class="section peculiarities peculiarities-reset">
         <div class="container">
           <h2 class="visually-hidden">Особенности</h2>
           <!-- скрыт заголовок -->
@@ -161,11 +161,17 @@
           <ul class="doing">
             <li class="doing__item">
               <div class="doing__thumb">
-                <img
-                  class="doing__img"
-                  src="./images/one.jpg"
-                  alt="крупный план, изображение, программист работающий в офисе"
-                />
+                <picture class="doing__img">
+                  <source
+                    srcset="./images/one.jpg 1x, ./images/one-x2.jpg 2x"
+                    media="(min-width: 1200px)"
+                    type="image/jpeg"
+                  />
+                  <img
+                    src="./images/one.jpg"
+                    alt="крупный план, изображение, программист работающий в офисе"
+                  />
+                </picture>
                 <div class="doing__caption">
                   <h3 class="doing__name">Десктопные приложения</h3>
                 </div>
@@ -174,11 +180,17 @@
 
             <li class="doing__item">
               <div class="doing__thumb">
-                <img
-                  class="doing__img"
-                  src="./images/two.jpg"
-                  alt="дизайнеры разрабатывают приложение на смартфоны"
-                />
+                <picture class="doing__img">
+                  <source
+                    srcset="./images/two.jpg 1x, ./images/two-x2.jpg 2x"
+                    media="(min-width: 1200px)"
+                    type="image/jpeg"
+                  />
+                  <img
+                    src="./images/two.jpg"
+                    alt="дизайнеры разрабатывают приложение на смартфоны"
+                  />
+                </picture>
                 <div class="doing__caption">
                   <h3 class="doing__name">Мобильные приложения</h3>
                 </div>
@@ -186,11 +198,17 @@
             </li>
             <li class="doing__item">
               <div class="doing__thumb">
-                <img
-                  class="doing__img"
-                  src="./images/three.jpg"
-                  alt="креативный художник с работает выбором цвета на планшете"
-                />
+                <picture class="doing__img">
+                  <source
+                    srcset="./images/three.jpg 1x, ./images/three-x2.jpg 2x"
+                    media="(min-width: 1200px)"
+                    type="image/jpeg"
+                  />
+                  <img
+                    src="./images/three.jpg"
+                    alt="креативный художник с работает выбором цвета на планшете"
+                  />
+                </picture>
                 <div class="doing__caption">
                   <h3 class="doing__name">Дизайнерские решения</h3>
                 </div>
@@ -204,11 +222,34 @@
           <h2 class="title">Наша команда</h2>
           <ul class="employee">
             <li class="employee__item">
-              <img
-                class="employee__pic"
-                src="./images/person-one.jpg"
-                alt="фото"
-              />
+              <picture class="employee__pic">
+                <source
+                  srcset="
+                    ./images/person-1-desktop.jpg    1x,
+                    ./images/person-1-desktop-x2.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/jpeg"
+                />
+                <source
+                  srcset="
+                    ./images/person-1-tablet.jpg    1x,
+                    ./images/person-1-tablet-x2.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/jpeg"
+                />
+                <source
+                  srcset="
+                    ./images/person-one.jpg           1x,
+                    ./images/person-one-mobile-x2.jpg 2x
+                  "
+                  media="(min-width: 320px)"
+                  type="image/jpeg"
+                />
+                <img src="./images/person-one.jpg" alt="Игорь Демьяненко" />
+              </picture>
+
               <div class="employee__caption">
                 <h3 class="employee__name">Игорь Демьяненко</h3>
                 <p class="employee__position">Product Designer</p>
@@ -246,11 +287,33 @@
               </div>
             </li>
             <li class="employee__item">
-              <img
-                class="employee__pic"
-                src="./images/person-two.jpg"
-                alt="фото"
-              />
+              <picture class="employee__pic">
+                <source
+                  srcset="
+                    ./images/person-2-desktop.jpg    1x,
+                    ./images/person-2-desktop-x2.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/jpeg"
+                />
+                <source
+                  srcset="
+                    ./images/person-2-tablet.jpg    1x,
+                    ./images/person-2-tablet-x2.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/jpeg"
+                />
+                <source
+                  srcset="
+                    ./images/person-two.jpg           1x,
+                    ./images/person-two-mobile-x2.jpg 2x
+                  "
+                  media="(min-width: 320px)"
+                  type="image/jpeg"
+                />
+                <img src="./images/person-two.jpg" alt="Игорь Демьяненко" />
+              </picture>
               <div class="employee__caption">
                 <h3 class="employee__name">Ольга Репина</h3>
                 <p class="employee__position">Frontend Developer</p>
@@ -287,11 +350,33 @@
               </div>
             </li>
             <li class="employee__item">
-              <img
-                class="employee__pic"
-                src="./images/person-three.jpg"
-                alt="фото"
-              />
+              <picture class="employee__pic">
+                <source
+                  srcset="
+                    ./images/person-3-desktop.jpg    1x,
+                    ./images/person-3-desktop-x2.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/jpeg"
+                />
+                <source
+                  srcset="
+                    ./images/person-3-tablet.jpg    1x,
+                    ./images/person-3-tablet-x2.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/jpeg"
+                />
+                <source
+                  srcset="
+                    ./images/person-three.jpg           1x,
+                    ./images/person-three-mobile-x2.jpg 2x
+                  "
+                  media="(min-width: 320px)"
+                  type="image/jpeg"
+                />
+                <img src="./images/person-one.jpg" alt="Игорь Демьяненко" />
+              </picture>
               <div class="employee__caption">
                 <h3 class="employee__name">Николай Тарасов</h3>
                 <p class="employee__position">Marketing</p>
@@ -328,11 +413,33 @@
               </div>
             </li>
             <li class="employee__item">
-              <img
-                class="employee__pic"
-                src="./images/person-four.jpg"
-                alt="фото"
-              />
+              <picture class="employee__pic">
+                <source
+                  srcset="
+                    ./images/person-4-desktop.jpg    1x,
+                    ./images/person-4-desktop-x2.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/jpeg"
+                />
+                <source
+                  srcset="
+                    ./images/person-4-tablet.jpg    1x,
+                    ./images/person-4-tablet-x2.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/jpeg"
+                />
+                <source
+                  srcset="
+                    ./images/person-four.jpg           1x,
+                    ./images/person-four-mobile-x2.jpg 2x
+                  "
+                  media="(min-width: 320px)"
+                  type="image/jpeg"
+                />
+                <img src="./images/person-one.jpg" alt="Игорь Демьяненко" />
+              </picture>
               <div class="employee__caption">
                 <h3 class="employee__name">Михаил Ермаков</h3>
                 <p class="employee__position">UI Designer</p>

@@ -1,3 +1,9 @@
+
+    .project__product-tablet {
+@media (min-width: 768px) and (max-width: 1199px) {
+        margin-bottom: 36px;
+    }
+}
 .project {
     display: flex;
     flex-wrap: wrap;
@@ -27,7 +33,6 @@
                 
 @media screen and (min-width: 1200px) {
                 width: 294px;
-                // margin-top: 0px;
                 margin-left: 30px;
                 flex-basis: calc((100% - 90px)/3);
                 &:nth-child(odd) {
@@ -57,6 +62,7 @@
         line-height: 1.88;
         color: $general-text-color;
     }
+
     
     &__title {
         padding: 20px 24px;
