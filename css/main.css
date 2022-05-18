@@ -1366,6 +1366,10 @@ body {
   }
 }
 
+.add {
+  display: none;
+}
+
 .button {
   width: 200px;
   height: 50px;
