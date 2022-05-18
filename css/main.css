@@ -149,6 +149,9 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   width: 100%;
   padding-top: 0px;
   padding-bottom: 0px;
@@ -159,6 +162,9 @@ body {
 .menu {
   display: none;
   position: fixed;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   z-index: 900;
   top: 0;
   left: 0;
@@ -166,12 +172,14 @@ body {
   padding-top: 32px;
   padding-bottom: 48px;
   width: 100%;
-  overflow: scroll;
   height: auto;
   background-color: #FFFFFF;
 }
 
 @media (max-width: 767px) {
+  .menu {
+    overflow: scroll;
+  }
   .menu.is-open {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1364,10 +1372,6 @@ body {
   .project__back {
     padding: 49px 24px 77px 24px;
   }
-}
-
-.add {
-  display: none;
 }
 
 .button {

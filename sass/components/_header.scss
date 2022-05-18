@@ -2,6 +2,7 @@
     position: relative;
     display: flex;
     align-items: center;
+                justify-content: space-between;
     width: 100%;
     padding-top: 0px;
     padding-bottom: 0px;
@@ -12,7 +13,7 @@
 .menu {
     display: none;
     position: fixed;
-
+                justify-content: space-between;
     z-index: 900;
     top: 0;
     left: 0;
@@ -20,47 +21,48 @@
     padding-top: 32px;
     padding-bottom: 48px;
     width: 100%;
-    overflow: scroll;
     height: auto;
     background-color: $white-text-color;
-
+    
     @media (max-width:767px) {
+        overflow: scroll;
         
-    &.is-open {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between ;
-        height: 100%;
-       }
-
-    & .nav__link {
-        font-size: 40px;
-        display: block;
-        padding: 16px 0;
-    }
-
-    & .current {
-        color: $link-hover-color;
-    }
-
-    & .phone__link {
-        display: flex;
-        padding: 16px 0;
-        font-size: 34px;
-    }
-
-    & .mail__link {
-        display: flex;
-        padding: 16px 0;
-        font-size: 24px;
-    }
+        &.is-open {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between ;
+            height: 100%;
         }
-@media screen and (min-width:768px) {
-    position: static;
-    display: flex;
-    flex-direction: row;
-    padding: 0;
-    margin-left: 88px;
+        
+        & .nav__link {
+            font-size: 40px;
+            display: block;
+            padding: 16px 0;
+        }
+        
+        & .current {
+            color: $link-hover-color;
+        }
+        
+        & .phone__link {
+            display: flex;
+            padding: 16px 0;
+            font-size: 34px;
+        }
+        
+        & .mail__link {
+            display: flex;
+            padding: 16px 0;
+            font-size: 24px;
+        }
+    }
+    @media screen and (min-width:768px) {
+        position: static;
+        display: flex;
+        flex-direction: row;
+        
+        padding: 0;
+        margin-left: 88px;
         & .nav__link {
             font-size: 14px;
             padding: 32px 0;
