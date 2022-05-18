@@ -626,6 +626,7 @@ body {
 @media (min-width: 480px) {
   .modal {
     min-width: 450px;
+    max-width: 450px;
   }
 }
 
@@ -805,6 +806,12 @@ body {
           transform: translate(-150%, -100%);
   -webkit-transition: background-image 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: background-image 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media (max-width: 473px) {
+  .check__icon {
+    top: 13px;
+  }
 }
 
 .peculiarities-title {
