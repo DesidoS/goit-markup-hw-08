@@ -23,7 +23,7 @@
     height: auto;
     background-color: $white-text-color;
 
-    @media (max-width:480px) {
+    // @media (max-width:480px) {
         
     &.is-open {
         display: flex;
@@ -53,7 +53,7 @@
         padding: 16px 0;
         font-size: 24px;
     }
-        }
+        // }
 @media screen and (min-width:768px) {
     position: static;
     display: flex;

@@ -170,42 +170,44 @@ body {
   background-color: #FFFFFF;
 }
 
-@media (max-width: 480px) {
-  .menu.is-open {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    height: 100%;
-  }
-  .menu .nav__link {
-    font-size: 40px;
-    display: block;
-    padding: 16px 0;
-  }
-  .menu .current {
-    color: #2196f3;
-  }
-  .menu .phone__link {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    padding: 16px 0;
-    font-size: 34px;
-  }
-  .menu .mail__link {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    padding: 16px 0;
-    font-size: 24px;
-  }
+.menu.is-open {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 100%;
+}
+
+.menu .nav__link {
+  font-size: 40px;
+  display: block;
+  padding: 16px 0;
+}
+
+.menu .current {
+  color: #2196f3;
+}
+
+.menu .phone__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 16px 0;
+  font-size: 34px;
+}
+
+.menu .mail__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 16px 0;
+  font-size: 24px;
 }
 
 @media screen and (min-width: 768px) {
