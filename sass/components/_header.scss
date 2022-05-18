@@ -1,6 +1,7 @@
 .page-header {
     position: relative;
     display: flex;
+    align-items: center;
     width: 100%;
     padding-top: 0px;
     padding-bottom: 0px;
@@ -10,7 +11,8 @@
 
 .menu {
     display: none;
-    position: absolute;
+    position: fixed;
+
     z-index: 900;
     top: 0;
     left: 0;
@@ -18,11 +20,16 @@
     padding-top: 32px;
     padding-bottom: 48px;
     width: 100%;
+    height: auto;
     background-color: $white-text-color;
-
+    
     &.is-open {
-        display: block;
-    }
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between ;
+        // height: 796px;
+        height: 100%;
+       }
 
     & .nav__link {
         font-size: 40px;
@@ -107,7 +114,6 @@
     .contact {
         display: flex;
         flex-direction: column-reverse;
-        margin-top: 270px;
         font-size: 14px;
     }
 
@@ -162,43 +168,6 @@
     }
 }
 
-
-.menu__button {
-    position: absolute;
-    z-index: 950;
-    display: inline-flex;
-    padding: 0;
-    margin: 0;
-    top: 10px;
-    left: 425px;
-    @media screen and (max-width: 479px) {
-        left: 350px;
-        }
-    cursor: pointer;
-    border: none;
-    background-color: transparent;
-
-    &:hover,
-    &:focus {
-        fill: $link-hover-color;
-    }
-
-@media screen and (min-width: 768px) {
-        display: none;
-    }
-}
-
-.burger-close {
-    display: none;
-}
-
-.is-open .burger-close {
-    display: block;
-}
-
-.is-open .burger {
-    display: none;
-}
 
 .navigation {
     display: flex;
@@ -278,4 +247,44 @@
             margin-right: 10px;
         }
     }
+}
+
+
+
+
+
+.menu__button {
+    z-index: 950;
+    display: inline-flex;
+    padding: 0;
+    margin: 0;
+
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+
+    &:hover,
+    &:focus {
+        fill: $link-hover-color;
+    }
+
+    @media screen and (min-width: 768px) {
+        display: none;
+    }
+}
+
+.burger-close {
+    display: none;
+}
+
+.is-open .burger-close {
+    display: block;
+    position: fixed;
+}
+
+.is-open .burger {
+    display: none;
+}
+.hidden.is-open {
+    overflow: hidden;
 }

@@ -121,7 +121,7 @@
     }
     &__input {
 
-        width: 450px;
+        // width: 450px;
         padding: 0 16px;
         height: 50px;
         border-radius: 4px;
@@ -150,8 +150,8 @@
         fill: $white-text-color;
     }
 }
-@media screen and (max-width: 479px) {
+@media screen and (min-width: 480px) {
     .subscribe__input {
-        width: 200px;
+        width: 450px;
     }
 }
