@@ -166,6 +166,7 @@ body {
   padding-top: 32px;
   padding-bottom: 48px;
   width: 100%;
+  overflow: scroll;
   height: auto;
   background-color: #FFFFFF;
 }
@@ -625,7 +626,6 @@ body {
 }
 
 .modal {
-  overflow: scroll;
   position: absolute;
   display: block;
   overflow: scroll;
