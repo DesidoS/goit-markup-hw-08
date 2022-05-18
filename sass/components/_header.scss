@@ -22,12 +22,13 @@
     width: 100%;
     height: auto;
     background-color: $white-text-color;
-    
+
+    @media (max-width:480px) {
+        
     &.is-open {
         display: flex;
         flex-direction: column;
         justify-content: space-between ;
-        // height: 796px;
         height: 100%;
        }
 
@@ -52,12 +53,13 @@
         padding: 16px 0;
         font-size: 24px;
     }
-
+        }
 @media screen and (min-width:768px) {
-        padding: 0;
-        display: flex;
-        position: static;
-        margin-left: 88px;
+    position: static;
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    margin-left: 88px;
 
         & .nav__link {
             font-size: 14px;
@@ -69,8 +71,15 @@
             flex-direction: column;
             margin-left: auto;
         }
-
+        
+        & .mail__link {
+            display: flex;
+            padding: 16px 0;
+            font-size: 24px;
+        }
+        
         & .phone__link {
+            display: flex;
             padding: 0;
             padding-bottom: 21px;
             margin-top: 10px;
@@ -248,10 +257,6 @@
         }
     }
 }
-
-
-
-
 
 .menu__button {
     z-index: 950;

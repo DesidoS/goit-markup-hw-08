@@ -170,53 +170,55 @@ body {
   background-color: #FFFFFF;
 }
 
-.menu.is-open {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  height: 100%;
-}
-
-.menu .nav__link {
-  font-size: 40px;
-  display: block;
-  padding: 16px 0;
-}
-
-.menu .current {
-  color: #2196f3;
-}
-
-.menu .phone__link {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding: 16px 0;
-  font-size: 34px;
-}
-
-.menu .mail__link {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding: 16px 0;
-  font-size: 24px;
+@media (max-width: 480px) {
+  .menu.is-open {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    height: 100%;
+  }
+  .menu .nav__link {
+    font-size: 40px;
+    display: block;
+    padding: 16px 0;
+  }
+  .menu .current {
+    color: #2196f3;
+  }
+  .menu .phone__link {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 16px 0;
+    font-size: 34px;
+  }
+  .menu .mail__link {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 16px 0;
+    font-size: 24px;
+  }
 }
 
 @media screen and (min-width: 768px) {
   .menu {
-    padding: 0;
+    position: static;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    position: static;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    padding: 0;
     margin-left: 88px;
   }
   .menu .nav__link {
@@ -233,7 +235,17 @@ body {
             flex-direction: column;
     margin-left: auto;
   }
+  .menu .mail__link {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 16px 0;
+    font-size: 24px;
+  }
   .menu .phone__link {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     padding: 0;
     padding-bottom: 21px;
     margin-top: 10px;
