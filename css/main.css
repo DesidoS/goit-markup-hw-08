@@ -1631,6 +1631,12 @@ body {
   cursor: pointer;
 }
 
+@media screen and (min-width: 480px) {
+  .subscribe__input {
+    width: 450px;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .subscribe__input {
     width: 358px;
@@ -1643,11 +1649,5 @@ body {
   width: 24px;
   height: 24px;
   fill: #FFFFFF;
-}
-
-@media screen and (min-width: 480px) {
-  .subscribe__input {
-    width: 450px;
-  }
 }
 /*# sourceMappingURL=main.css.map */

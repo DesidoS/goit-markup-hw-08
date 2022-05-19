@@ -120,8 +120,6 @@
 
     }
     &__input {
-
-        // width: 450px;
         padding: 0 16px;
         height: 50px;
         border-radius: 4px;
@@ -132,12 +130,15 @@
         line-height: 1.25;
         letter-spacing: 0.03em;
         background-color: $bg-color-second;
+
         &:focus {
             border: 1px solid $link-hover-color;
             outline: $link-hover-color;
             cursor: pointer;
         }
-        
+        @media screen and (min-width: 480px) {
+            width: 450px;
+        }
         @media screen and (min-width: 1200px) {
             width: 358px;
             margin-right: 12px;
@@ -150,8 +151,4 @@
         fill: $white-text-color;
     }
 }
-@media screen and (min-width: 480px) {
-    .subscribe__input {
-        width: 450px;
-    }
-}
+
