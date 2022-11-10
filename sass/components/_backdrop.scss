@@ -1,203 +1,198 @@
 .backdrop {
-    position: fixed;
-    z-index: 999;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: $backdrop-bg-color;
-    opacity: 1;
-    transform: scale(1);
-    transition: transform $cubic-bezier,
-    visibility $cubic-bezier,
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $backdrop-bg-color;
+  opacity: 1;
+  transform: scale(1);
+  transition: transform $cubic-bezier, visibility $cubic-bezier,
     opacity $cubic-bezier;
 }
 
 .is-hidden {
-    visibility: hidden;
-    opacity: 0;
-    transform: scale(0);
-    pointer-events: none;
+  visibility: hidden;
+  opacity: 0;
+  transform: scale(0);
+  pointer-events: none;
 }
 .form {
-    position: relative;
+  position: relative;
 }
 .modal {
-    position: absolute;
-    display: block;
-    overflow: scroll;
-    top: 50%;
-    left: 50%;
-    width: 100%;
-    height: 100%;
-    transform: translate(-50%, -50%);
-    padding: 40px;
-    min-width: 95%;
-    max-height: 609px;
-    
-@media (min-width:480px) {
+  position: absolute;
+  display: block;
+  overflow: scroll;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  transform: translate(-50%, -50%);
+  padding: 40px;
+  min-width: 95%;
+  max-height: 609px;
+
+  @media (min-width: 480px) {
     min-width: 450px;
     max-width: 450px;
-}
-@media (min-width:1200px) {
+  }
+  @media (min-width: 1200px) {
     min-width: 528px;
-}
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
-        0px 1px 1px rgba(0, 0, 0, 0.14),
-        0px 2px 1px rgba(0, 0, 0, 0.2);
-    border-radius: 4px;
+  }
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  background-color: $white-text-color;
+
+  &__close {
+    position: absolute;
+    padding: 0;
+    right: 8px;
+    top: 8px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
     background-color: $white-text-color;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
 
-
-    &__close {
-        position: absolute;
-        padding: 0;
-        right: 8px;
-        top: 8px;
-        width: 30px;
-        height: 30px;
-        cursor: pointer;
-        background-color: $white-text-color;
-        border: 1px solid rgba(0, 0, 0, 0.1);
-        border-radius: 50%;
-
-        &:hover .modal__icon,
-        &:focus .modal__icon {
-            fill: $link-hover-color;
-        }
+    &:hover .modal__icon,
+    &:focus .modal__icon {
+      fill: $link-hover-color;
     }
+  }
 
-    &__icon {
-        width: 11px;
-        height: 11px;
-        fill: black;
-        transition: fill $cubic-bezier;
-    }
+  &__icon {
+    width: 11px;
+    height: 11px;
+    fill: black;
+    transition: fill $cubic-bezier;
+  }
 }
 
 .form__header {
-    display: block;
-    padding-left: 4px;
-    text-align: center;
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 1.5;
+  display: block;
+  padding-left: 4px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.5;
 
-    color: $tit-text-color;
+  color: $tit-text-color;
 }
 
 .form__field {
-    display: block;
-    position: relative;
-
+  display: block;
+  position: relative;
 }
 
 .form__input {
-    width: 100%;
-    padding-top: 12px;
-    padding-bottom: 12px;
-    padding-left: 42px;
-    margin-top: 4px;
-    border: 1px solid rgba(33, 33, 33, 0.2);
-    border-radius: 4px;
+  width: 100%;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 42px;
+  margin-top: 4px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
 
-    &:focus {
-        border: 1px solid $link-hover-color;
-        outline: $link-hover-color;
-        cursor: pointer;
-    }
+  &:focus {
+    border: 1px solid $link-hover-color;
+    outline: $link-hover-color;
+    cursor: pointer;
+  }
 
-    &:focus+.form__icon {
-        fill: $link-hover-color;
-    }
+  &:focus + .form__icon {
+    fill: $link-hover-color;
+  }
 }
 
 .form__label {
-    display: block;
-    margin-top: 10px;
+  display: block;
+  margin-top: 10px;
 
-    font-size: 12px;
-    line-height: 1.16;
-    letter-spacing: 0.01em;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
 }
 
 .form__icon {
-    fill: $tit-text-color;
-    position: absolute;
-    top: 29px;
-    left: 15px;
-    width: 18px;
-    height: 18px;
+  fill: $tit-text-color;
+  position: absolute;
+  top: 29px;
+  left: 15px;
+  width: 18px;
+  height: 18px;
 }
 
 .form__input--comment {
-    display: block;
-    padding-left: 16px;
-    padding-right: 16px;
-    resize: none;
-    height: 120px;
+  display: block;
+  padding-left: 16px;
+  padding-right: 16px;
+  resize: none;
+  height: 120px;
 
-    &::placeholder {
-        font-size: 12px;
-        line-height: 1.16;
-        letter-spacing: 0.01em;
-        color: $placeholder-comment;
-    }
+  &::placeholder {
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.01em;
+    color: $placeholder-comment;
+  }
 }
 
-
 .check {
-    position: relative;
-    display: flex;
-    margin-top: 20px;
-    margin-bottom: 30px;
+  position: relative;
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 30px;
 
-    &__label {
-        margin-left: 24px;
-@media (min-width:1200px) {
-            margin-left: 37px;
-        }
-        line-height: 1.16;
-        font-weight: 400;
-        font-size: 12px;
+  &__label {
+    margin-left: 24px;
+    @media (min-width: 1200px) {
+      margin-left: 37px;
+    }
+    line-height: 1.16;
+    font-weight: 400;
+    font-size: 12px;
+  }
+
+  &__link {
+    color: $link-hover-color;
+    text-decoration: underline;
+  }
+
+  &__input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+    clip: rect(0 0 0 0);
+
+    &:checked ~ .check__icon {
+      border-color: transparent;
+      background-image: url(../images/check1.svg);
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    display: block;
+    width: 16px;
+    height: 15px;
+    @media (max-width: 473px) {
+      top: 13px;
     }
 
-    &__link {
-        color: $link-hover-color;
-        text-decoration: underline;
-    }
+    background-size: cover;
+    background-position: center;
+    background-origin: border-box;
+    background-image: url(../images/border.svg);
 
-    &__input {
-        position: absolute;
-        width: 1px;
-        height: 1px;
-        margin: -1px;
-        padding: 0;
-        overflow: hidden;
-        border: 0;
-        clip: rect(0 0 0 0);
-
-        &:checked~.check__icon {
-            border-color: transparent;
-            background-image: url(../images/check1.svg);
-        }
-    }
-
-    &__icon {
-        position: absolute;
-        display: block;
-        width: 16px;
-        height: 15px;
-        @media (max-width: 473px) {
-        top: 13px;
-        }
-
-        background-size: cover;
-        background-position: center;
-        background-origin: border-box;
-        background-image: url(../images/border.svg);
-
-        transform: translate(-150%, -100%);
-        transition: background-image $cubic-bezier;
-    }
+    transform: translate(-150%, -100%);
+    transition: background-image $cubic-bezier;
+  }
 }
